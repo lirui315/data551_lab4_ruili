@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <title>First HTML Webpage</title>
+  </head>
+  <body>
+
+    <h1>Heading 1: This is your guide</h1>
+
+    <h2>Heading 2: This is your guide!</h2>
+    <p>Paragraph: Welcome to the paragraphs. Use h1 tag to create headings. Use p tag to create a paragraph. Basically, we control the coding by opening and closing tags. There is no requirement for putting commas, semicolon, or indentations. Just use the opening and closing tags. For text, you just write text as you do in a Markdown. Remember that everything should be written within the html tag.</p>
+
+    <div style="background-color:lightblue">
+    <h2>Heading 2: What is a division?</h2>
+    <p>Here, we use a division to show how the div tag helps in styling your page. Inside the opening div tag use stryle="background-color:lightblue" to see how we create a blue background. There are a wide variety of attributes to choose from.</p>
+    </div>
+
+    <p>
+        Use <strong> a href="link to an image or website to create a link" </strong>. Use the <strong> strong </strong> tag or <b> b </b> tag to make text <strong> strong/bold.
+    <a href="http://www.google.com">
+        Google Link
+    </a>
+    </p>
+
+    <h3> Links to some cool data visualization websites</h3>
+    <ul>
+        <li><a href="https://visme.co/blog/best-data-visualizations/">The 25 Best Data Visualizations of 2018</a></li>
+
+        <li><a href="https://www.tableau.com/learn/articles/best-data-visualization-blogs">The 10 best data visualization blogs to follow</a></li>
+
+    </ul>
+
+    </body>
+</html>
