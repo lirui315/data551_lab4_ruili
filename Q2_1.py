@@ -17,7 +17,7 @@ by_purpose.columns = ['Purpose','Amount']
 
 app.layout = html.Div([
     dcc.Graph(
-        id='life-exp-vs-gdp',
+        id='amount by purpose',
         figure={
             'data' :[
                 go.Bar(
@@ -25,11 +25,11 @@ app.layout = html.Div([
                     y=by_purpose['Amount'],
                     text=by_purpose['Amount'],
                     textposition = 'outside',
-                    textfont={'size':14},
-                    opacity=0.8,
+                    textfont={'size':20},
+                    opacity=0.5,
                     marker={
                         'color':'rgb(100,170,187)',
-                        'line': {'width': 0.5, 'color': 'white'}
+                        'line': {'width': 0.6, 'color': 'white'}
                             }
                         )
                     ]

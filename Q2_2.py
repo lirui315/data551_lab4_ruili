@@ -26,7 +26,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
     dcc.Dropdown(
-        id='my-dropdown',
+        id='dropdown',
         options=[
             {'label': i, 'value': i} for i in dfcountry.Country.unique()
         ],
@@ -37,7 +37,7 @@ app.layout = html.Div([
 
 @app.callback(
     dash.dependencies.Output('bar_plot', 'figure'),
-    [dash.dependencies.Input('my-dropdown', 'value')])
+    [dash.dependencies.Input('dropdown', 'value')])
 
 def barplot(country):
     name = dfcountry[dfcountry['Country']==country]
@@ -47,11 +47,7 @@ def barplot(country):
             go.Bar(
                 x=name['Purpose'],
                 y=name['Amount'],
-                textposition='outside',
-                textfont=dict(
-                size=12,
-                color='black'
-                ),
+                opacity=0.5,
                 marker=dict(
                 color='rgb(100, 170, 187)')
                 )
@@ -60,14 +56,10 @@ def barplot(country):
             xaxis=dict(
             tickangle=0,
             tickfont=dict(
-                size=10.5
+                size=11
                 ),
-            tickwidth=1.2
-            ),
-            title='Donation Amount by Purposes',
-            titlefont=dict(
-                size=16
-                )
+            tickwidth=1
+            )
         )
 }
 
